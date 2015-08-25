@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="KBOBase.KBOClass">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAIAAAAgAAAAIAAAAAQAAAAEAAAAAgAAAAAAAgA=</HashCode>
+      <FileName>BaseModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KBOBase.KBOEntity">
+    <Position X="3.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAIAAACAQQAAgEEAAAAAAAAAAAAgA=</HashCode>
+      <FileName>BaseModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KBOBase.KBOAttribute">
+    <Position X="5.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAACAgAAAgIAAAAgA=</HashCode>
+      <FileName>BaseModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KBOBase.KBOAttributeType">
+    <Position X="7.75" Y="6.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAIAAAAAQAAAAEAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>BaseModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KBOBase.KBORelation">
+    <Position X="5.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAgAAAAAAAAAAAAAAEgAAABgAAAAIAAAAgA=</HashCode>
+      <FileName>BaseModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KBOBase.KBORelationType">
+    <Position X="8" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAIAAAAAQAAAAEAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>BaseModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

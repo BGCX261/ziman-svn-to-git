@@ -1,0 +1,179 @@
+﻿<ribbon:RibbonWindow x:Class="KBOEditor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ribbon="clr-namespace:Microsoft.Windows.Controls.Ribbon;assembly=RibbonControlsLibrary"
+        Title="MainWindow"
+		x:Name="RibbonWindow"
+                     
+		MinWidth="640" MinHeight="480" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" d:DesignWidth="937" SizeToContent="Manual" Loaded="RibbonWindow_Loaded" Icon="/KBOEditor;component/Images/LargeIcon.png">
+
+    <Grid x:Name="LayoutRoot" ShowGridLines="True" >
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="1" >
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition x:Name="Entities" Width="Auto" MinWidth="150"/>
+                <ColumnDefinition x:Name="Description" Width="*" MinWidth="300"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+
+
+                <Rectangle Grid.Row="0" Fill="LightCyan"/>
+                <Label Grid.Row="0" Content="Сущности" HorizontalAlignment="Center"></Label>
+
+                <TreeView x:Name="tvEntities"  Grid.Row="1" BorderBrush="Black">
+                    
+                </TreeView>
+
+            </Grid>
+
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" MaxHeight="200"/>
+                    <RowDefinition Height="*" MaxHeight="350"/>
+                    <RowDefinition Height="*" MaxHeight="350"/>
+                    <RowDefinition Height="*" MaxHeight="600"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <Rectangle Fill="LightYellow" />
+                    <Label  HorizontalAlignment="Center" >Спецификация</Label>
+                </Grid>
+
+                <Grid Grid.Row="1" >
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" MinWidth="100"/>
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Margin="5,0" Grid.Column="0">Класс:</Label>
+                    <ComboBox Margin="5,0" Grid.Column="1" MinWidth="300">
+                        <TreeView>
+
+                        </TreeView>
+                    </ComboBox>
+
+                </Grid>
+
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" MinWidth="100" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Margin="5,0" Grid.Column="0">Атрибуты:</Label>
+                    <TreeView  Grid.Column="1" Margin="5,5" MinWidth="300" MinHeight="100" BorderBrush="Black"></TreeView>
+                </Grid>
+
+                <Grid Grid.Row="3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" MinWidth="100" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Column="0" >Связи:</Label>
+                    <TreeView  Grid.Column="1" Margin="5,5" MinWidth="300" MinHeight="100" BorderBrush="Black"></TreeView>
+                </Grid>
+
+                <Grid Grid.Row="4">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" MinWidth="100" />
+                        <ColumnDefinition Width="*" />
+
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Column="0" >Описание:</Label>
+
+                    <DocumentViewer Grid.Column="1" Margin="5,5" MinWidth="300" MinHeight="100" />
+
+                </Grid>
+            </Grid>
+        </Grid>
+
+        <ribbon:Ribbon x:Name="Ribbon" Grid.Row="0">
+            <ribbon:Ribbon.ApplicationMenu>
+                <ribbon:RibbonApplicationMenu SmallImageSource="Images\SmallIcon.png">
+                    <ribbon:RibbonApplicationMenuItem Header="Hello _Ribbon"
+                                                      x:Name="MenuItem1"
+                                                      ImageSource="Images\LargeIcon.png"/>
+                </ribbon:RibbonApplicationMenu>
+            </ribbon:Ribbon.ApplicationMenu>
+            <ribbon:RibbonTab x:Name="HomeTab" 
+                              Header="Главная">
+                <ribbon:RibbonGroup x:Name="Group1" 
+                                    Header="Сущности">
+                    <ribbon:RibbonButton x:Name="Button1"
+                                         LargeImageSource="Images\LargeIcon.png"
+                                         SmallImageSource="Images\SmallIcon.png"
+                                         Label="Добавить сущность" />
+
+                    <ribbon:RibbonButton x:Name="Button2"
+                                         LargeImageSource="Images\LargeIcon.png"
+                                         SmallImageSource="Images\SmallIcon.png"
+                                         Label="Удалить сущность" />
+                </ribbon:RibbonGroup>
+
+                <ribbon:RibbonGroup x:Name="Group2" 
+                                    Header="Атрибуты">
+                    <ribbon:RibbonButton x:Name="Button3"
+                                         LargeImageSource="Images\LargeIcon.png"
+                                         SmallImageSource="Images\SmallIcon.png"
+                                         Label="Добавить атрибут" />
+
+                    <ribbon:RibbonButton x:Name="Button4"
+                                         LargeImageSource="Images\LargeIcon.png"
+                                         SmallImageSource="Images\SmallIcon.png"
+                                         Label="Удалить атрибут" />
+                </ribbon:RibbonGroup>
+
+                <ribbon:RibbonGroup x:Name="Group3" 
+                                    Header="Связи">
+                    <ribbon:RibbonButton x:Name="Button5"
+                                         LargeImageSource="Images\LargeIcon.png"
+                                         SmallImageSource="Images\SmallIcon.png"
+                                         Label="Добавить связь" />
+
+                    <ribbon:RibbonButton x:Name="Button6"
+                                         LargeImageSource="Images\LargeIcon.png"
+                                         SmallImageSource="Images\SmallIcon.png"
+                                         Label="Удалить связь" />
+                </ribbon:RibbonGroup>
+
+                <ribbon:RibbonGroup x:Name="Group4" 
+                                    Header="Описание">
+                    <ribbon:RibbonButton x:Name="Button7"
+                                         LargeImageSource="Images\LargeIcon.png"
+                                         SmallImageSource="Images\SmallIcon.png"
+                                         Label="Создать описание" />
+
+                    <ribbon:RibbonButton x:Name="Button8"
+                                         LargeImageSource="Images\LargeIcon.png"
+                                         SmallImageSource="Images\SmallIcon.png"
+                                         Label="Импортировать описание" />
+                </ribbon:RibbonGroup>
+
+            </ribbon:RibbonTab>
+        </ribbon:Ribbon>
+        
+        <Grid Grid.Row="2">
+            <StatusBar  Name="statusBar1" Margin="0" Padding="0" >
+                <Label x:Name="label_Status" Content="Состояние" FontSize="8" Margin="0" />
+            </StatusBar>
+            
+        </Grid>
+        
+    </Grid>
+</ribbon:RibbonWindow>
